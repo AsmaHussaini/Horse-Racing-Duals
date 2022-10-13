@@ -10,3 +10,11 @@ sortedStrengthsArray = sortedStrengthsArray.sort(function(a, b) {
     return (b - a);
 });
 
+for (var i = sortedStrengthsArray.length; i > 0; i--) {
+    var thisDiff = sortedStrengthsArray[i - 1] - sortedStrengthsArray[i];
+    if (thisDiff < minDiff) {
+        minDiff = thisDiff;
+    }
+}
+
+console.log(minDiff);
